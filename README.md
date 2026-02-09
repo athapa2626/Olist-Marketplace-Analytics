@@ -51,17 +51,30 @@ Created customer-level features:
 - **Total spending** positively correlates with repeat behavior (odds ratio: 45.8)
 - **Average order value** shows negative correlation when controlling for other factors
 
-## Files
-
+## Project Structure
 ```
-├── analysis.ipynb                           # Main analysis notebook
-├── data/
-│   ├── olist_customers_dataset.csv
-│   ├── olist_orders_dataset.csv
-│   ├── olist_order_items_dataset.csv
-│   └── olist_products_dataset.csv
-└── Data/raw/
-    └── customer_repeat_model_dataset.xlsx   # Exported features
+Olist_ecommerce_analysis_automation/
+├── analysis.ipynb                    # Main analysis notebook
+├── Data/
+│   ├── raw/                          # Original datasets
+│   │   ├── olist_customers_dataset.csv
+│   │   ├── olist_orders_dataset.csv
+│   │   ├── olist_order_items_dataset.csv
+│   │   ├── olist_products_dataset.csv
+│   │   ├── olist_order_payments_dataset.csv
+│   │   ├── olist_order_reviews_dataset.csv
+│   │   ├── olist_sellers_dataset.csv
+│   │   ├── olist_geolocation_dataset.csv
+│   │   ├── product_category_name_translation.csv
+│   │   └── customer_repeat_model_dataset.xlsx  # Exported features
+│   └── cleaned/                      # Processed datasets
+│       ├── olist_customers_clean.csv
+│       ├── olist_orders_clean.csv
+│       ├── olist_order_items_clean.csv
+│       ├── olist_products_clean.csv
+│       ├── olist_full_report.xlsx    # Comprehensive analysis
+│       └── olist_dashboard_summary.xlsx  # Executive summary
+└── README.md
 ```
 
 ## Requirements
@@ -86,3 +99,4 @@ openpyxl  # for Excel export
 - Test ensemble models (Random Forest, XGBoost)
 - Analyze geographic patterns
 - Time-series forecasting of order volume
+
